@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import Link from "next/Link";
+import Link from "next/link";
 
 const Home: NextPage = () => {
   return (
@@ -15,14 +15,14 @@ const Home: NextPage = () => {
             a id nisi.
           </p>
           <div className="form-control mt-6">
-            <a href="/auth/login" className="btn btn-primary">
-              Login
-            </a>
+            <Link href="/auth/login">
+              <button className="btn btn-primary">Login</button>
+            </Link>
           </div>
           <div className="form-control mt-6">
-            <a href="/auth/register" className="btn btn-warning">
-              Register
-            </a>
+            <Link href="/auth/register">
+              <button className="btn btn-warning">Register</button>
+            </Link>
           </div>
         </div>
       </div>

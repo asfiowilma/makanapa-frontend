@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/Link";
+import Link from "next/link";
 import { useForm } from "react-hook-form";
 import Router from "next/router";
 
@@ -72,7 +72,7 @@ export default function Login() {
           </form>
           <div className="flex flex-row mt-5">
             <div>
-              <p>Don't have an account?</p>
+              <p>Dont have an account?</p>
             </div>
             <div className="ml-1 text-yellow-500">
               <Link href="/auth/register">Sign up</Link>
@@ -95,7 +95,7 @@ export default function Login() {
           </p>
           <div className="mt-5 flex justify-center content-end">
             <div>
-              <Image src="/auth.png" width={400} height={610} />
+              <Image src="/auth.png" width={400} height={610} alt="homeImage" />
             </div>
           </div>
         </div>
