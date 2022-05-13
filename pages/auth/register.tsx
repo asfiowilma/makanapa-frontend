@@ -11,7 +11,6 @@ export default function Register() {
   } = useForm();
 
   const registerAkun = async (content: any) => {
-    console.log(JSON.stringify(content));
     try {
       const res = await fetch(
         "https://makanapa-be.herokuapp.com/auth/register/pengguna",
