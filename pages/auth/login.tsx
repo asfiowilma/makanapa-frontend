@@ -51,7 +51,7 @@ export default function Login() {
               </div>
               <button
                 type="submit"
-                className={`btn border-none bg-primary-400 hover:bg-primary-500 w-full ${isLoadingLogin && "loading"}`}
+                className={`btn btn-primary w-full ${isLoadingLogin && "loading"}`}
               >
                 {isLoadingLogin ? "Logging in.." : "Login"}
               </button>

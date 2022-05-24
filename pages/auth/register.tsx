@@ -76,7 +76,7 @@ export default function Register() {
               </div>
               <button
                 type="submit"
-                className={`btn border-none bg-primary-400 hover:bg-primary-500 w-full ${isLoadingRegister && "loading"}`}
+                className={`btn btn-primary w-full ${isLoadingRegister && "loading"}`}
               >
                 {isLoadingRegister ? "Signing up.." : "Sign Up"}
               </button>
