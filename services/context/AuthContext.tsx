@@ -43,7 +43,7 @@ function AuthProvider({ children }: { children: ReactNode }) {
         axios.defaults.headers.common['Authorization'] = `Bearer ${token_}`
         toast.success('Berhasil login')
         setIsLoadingLogin(false)
-        router.push('/home')
+        router.push('/dashboard')
       }).catch((error) => {
         const errorMsg = error.response?.data.error
         toast.error(errorMsg)

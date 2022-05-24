@@ -15,7 +15,7 @@ export default function Register() {
   const { isAuthenticated, isLoadingRegister, useRegister } = useAuth()
 
   if (isAuthenticated) {
-    router.push('/home')
+    router.push('/dashboard')
   }
 
 

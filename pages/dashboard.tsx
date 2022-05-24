@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 
-export default function home() {
+export default function DashboardPage() {
   const { isAuthenticated, logout } = useAuth()
   const router = useRouter()
 
