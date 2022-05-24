@@ -65,9 +65,8 @@ function AuthProvider({ children }: { children: ReactNode }) {
       })
   }
 
-  const useLoadUserProfile = () => {
-    return loadUserProfile(token).then((data) => {
-      console.log("🚀 ~ file: AuthContext.tsx ~ line 55 ~ returnloadUserProfile ~ data", data)
+  const useLoadUserProfile = async () => {
+    loadUserProfile(token).then((data) => {
       setUserProfile(data)
     }).catch((error) => {
       const errorMsg = error.response?.data.error
@@ -79,7 +78,7 @@ function AuthProvider({ children }: { children: ReactNode }) {
     setToken('')
     setUserProfile(null)
     removeCookies('token')
-    router.push('/auth/login')
+    router.push('/')
     toast.success('Berhasil logout')
   }
 

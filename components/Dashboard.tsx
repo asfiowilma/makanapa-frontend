@@ -1,0 +1,106 @@
+import Avatar from 'boring-avatars'
+import React, { ReactNode } from 'react'
+import { FiTrash } from 'react-icons/fi';
+
+interface FoodHeaderProps {
+  category: string
+}
+
+interface FoodCardProps {
+  id: number
+  calories: number
+  name: string
+}
+
+interface WorkoutCardProps {
+  id: number
+  time: number
+  calories: number
+  name: string
+}
+
+interface FoodColumnProps {
+  children: ReactNode
+}
+
+export const HeroCards = () => {
+  return (
+    <div className="grid grid-cols-3 gap-4 mb-8">
+      <div className="col-span-2 card bg-base-100 shadow-xl image-full">
+        <figure className="h-64"><img className="object-cover w-full object-top" src="https://images.unsplash.com/photo-1621291726769-86a0b3fc6357?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070" alt="Meal" /></figure>
+        <div className="card-body">
+          <h2 className="card-title">Bingung Mau Makan Apa?</h2>
+          <p>Lihat rekomendasi kami untuk sarapan, makan siang, dan makan malam sekarang~</p>
+          <div className="card-actions justify-end">
+            <button className="btn btn-primary">Lihat Rekomendasi</button>
+          </div>
+        </div>
+      </div>
+      <div className="card bg-base-100 shadow-xl image-full">
+        <figure><img src="https://images.unsplash.com/photo-1549060279-7e168fcee0c2?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070" alt="Workout" /></figure>
+        <div className="card-body">
+          <h2 className="card-title">Ayo Workout!</h2>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam magni error at modi, odio animi.</p>
+          <div className="card-actions justify-end">
+            <button className="btn btn-primary">Workout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export const FoodHeader = ({ category }: FoodHeaderProps) => {
+  return <div className="bg-primary-100 text-center text-primary-800 p-2 rounded-lg uppercase font-medium">
+    {category}
+  </div>
+}
+
+export const FoodCard = ({ id, name, calories }: FoodCardProps) => {
+  return <div className="card card-side bg-base-100 shadow-lg">
+    <figure>
+      <Avatar
+        size={80}
+        name={name}
+        variant="bauhaus"
+        colors={["#CC333F", "#00A0B0", "#E29A1E", "#EAB835", "#EDC951"]}
+        square
+      />
+    </figure>
+    <div className="card-body p-4">
+      <h2 className="card-title">{name}</h2>
+      <p className="text-gray-400">{calories} calories</p>
+      <div className="card-actions justify-end">
+        <button className="btn btn-ghost text-error btn-sm btn-circle"><FiTrash className="w-5 h-5" /></button>
+      </div>
+    </div>
+  </div>
+}
+
+export const FoodColumn = ({ children }: FoodColumnProps) => {
+  return <div className="flex flex-col gap-4">{children}</div>
+}
+
+export const WorkoutCard = ({ id, name, time, calories }: WorkoutCardProps) => {
+  return <div className="card card-side bg-base-100 shadow-lg">
+    <figure>
+      <Avatar
+        size={80}
+        name={name}
+        variant="ring"
+        colors={["#CC333F", "#00A0B0", "#E29A1E", "#EAB835", "#EDC951"]}
+        square
+      />
+    </figure>
+    <div className="card-body p-4">
+      <h2 className="card-title">{name}</h2>
+      <div className="text-gray-400 leading-tight">
+        <div>{time} seconds</div>
+        <div>{calories} calories</div>
+      </div>
+      <div className="card-actions justify-end">
+        <button className="btn btn-ghost text-error btn-sm btn-circle"><FiTrash className="w-5 h-5" /></button>
+      </div>
+    </div>
+  </div>
+}
