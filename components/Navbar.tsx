@@ -2,6 +2,7 @@ import useAuth from '@hooks/useAuth'
 import React from 'react'
 import Avatar from "boring-avatars";
 import Link from 'next/link';
+import { FiMenu } from 'react-icons/fi';
 
 type Props = {}
 
@@ -10,7 +11,10 @@ export const Navbar = (props: Props) => {
 
   return (
     <div className="navbar p-0 bg-base-100 shadow sticky top-0 z-50">
-      <div className="flex-1"></div>
+      <div className="flex-1">
+        <label htmlFor="my-drawer-2" className="btn btn-ghost drawer-button lg:hidden"><FiMenu className="w-5 h-5" /></label>
+
+      </div>
       <div className="p-2">
         {isAuthenticated ? (
           <div className="dropdown dropdown-end">
