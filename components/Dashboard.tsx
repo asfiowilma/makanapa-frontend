@@ -1,4 +1,5 @@
 import Avatar from 'boring-avatars'
+import Link from 'next/link';
 import React, { ReactNode } from 'react'
 import { FiTrash } from 'react-icons/fi';
 
@@ -21,7 +22,7 @@ export const HeroCards = () => {
           <h2 className="card-title">Bingung Mau Makan Apa?</h2>
           <p>Lihat rekomendasi kami untuk sarapan, makan siang, dan makan malam sekarang~</p>
           <div className="card-actions justify-end">
-            <button className="btn btn-primary">Lihat Rekomendasi</button>
+            <Link href='/meal'><a className="btn btn-primary">Lihat Rekomendasi</a></Link>
           </div>
         </div>
       </div>
