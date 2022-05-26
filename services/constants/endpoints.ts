@@ -1,1 +1,1 @@
-export const AUTH_URL = "https://makanapa-be.herokuapp.com";
+export const AUTH_URL = "http://34.123.46.127:8080";

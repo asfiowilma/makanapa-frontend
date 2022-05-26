@@ -64,16 +64,6 @@ export default function Login() {
                 </a>
               </Link>
             </div>
-            <div className="mb-2 text-center text-gray-400">or</div>
-            <button
-              type="submit"
-              className="btn btn-outline gap-2 items-center w-full"
-            >
-              <div>
-                <Image src="/google.png" width={16} height={16} alt="" />
-              </div>
-              <div>Authorize with Google</div>
-            </button>
           </div>
         </div>
         <div className="bg-primary-400 h-screen flex flex-col items-center justify-end">
