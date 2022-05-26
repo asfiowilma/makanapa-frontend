@@ -27,7 +27,7 @@ function MealPage({ mealRecord_ }: Props) {
       <div>
         <div className="text-primary-500 font-bold mb-4">Makanan Saya</div>
         <div className="grid grid-cols-3 gap-4">
-          {mealHistory && mealHistory.map((meal) => <MealCard {...{ ...meal, ...meal.food }} />)}
+          {mealHistory && mealHistory.map((meal) => <MealCard key={meal.id} {...{ ...meal, ...meal.food }} />)}
         </div>
       </div>
     </Layout>

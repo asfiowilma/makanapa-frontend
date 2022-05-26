@@ -44,7 +44,7 @@ export default function DashboardPage({ mealRecord_ }: Props) {
         <Link href="/meal"><a className="btn btn-ghost">Lihat Semua</a></Link>
       </div>
       <div className="grid grid-cols-3 gap-4 mb-8">
-        {mealHistory && mealHistory.slice(0, 5).map((meal) => <MealCard {...{ ...meal, ...meal.food }} />)}
+        {mealHistory && mealHistory.slice(0, 5).map((meal) => <MealCard key={meal.id} {...{ ...meal, ...meal.food }} />)}
         <div className="grid place-items-center">
           <Link href="/meal"><a className="btn btn-ghost text-primary-500">Lihat Semua<FiArrowRight className="h-5 w-5 ml-2" /></a></Link>
         </div>

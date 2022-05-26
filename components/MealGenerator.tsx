@@ -79,7 +79,7 @@ export const MealGenerator = (props: Props) => {
         ))}
         {isLoading &&
           ['breakfast', 'lunch', 'dinner'].map((category) => (
-            <FoodColumn>
+            <FoodColumn key={category}>
               <div className={`bg-primary-100 text-primary-800 rounded-lg uppercase font-medium flex justify-between items-center py-2 pl-4 pr-2`}>
                 <div>{category}</div>
                 <div className="btn btn-ghost btn-sm"><FiRefreshCw className="w-5 h-5 animate-spin" /></div>
