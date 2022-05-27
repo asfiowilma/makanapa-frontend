@@ -17,8 +17,6 @@ interface HistoryCardProps {
 export const HistoryCard = ({ id, user_id, timestamp, workouts }: HistoryCardProps) => {
     const { workoutHistory, setWorkoutHistory } = useWorkout()
 
-    console.log(workouts)
-
     let body = [<div></div>]
 
     workouts.forEach((wo) => {

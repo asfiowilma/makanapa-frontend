@@ -12,6 +12,12 @@ interface WorkoutCardProps {
   name: string
 }
 
+interface CalorieCircleProps {
+  id: number
+  calories: number
+  type: string
+}
+
 
 export const HeroCards = () => {
   return (
@@ -62,4 +68,21 @@ export const WorkoutCard = ({ id, name, time, calories }: WorkoutCardProps) => {
       </div>
     </div>
   </div>
+}
+
+export const CalorieCircle = ({ id, calories, type}: CalorieCircleProps) => {
+  return (
+  <div className="calorie-circle mb-4">
+    <li className="overflow-y-auto w-full bg-base-100 flex justify-center items-center">
+      <div className="w-28 h-28 bg-secondary-600 rounded-full flex justify-center items-center">
+        <div className="text-white text-3xl font-extrabold">{calories}</div>
+      </div>
+    </li>
+    <li className="w-full flex justify-center items-center">
+      <div className="flex justify-center items-center">
+        <div className="text-black text-xl font-semibold">{type}</div>
+      </div>
+    </li>
+  </div>
+  )
 }
