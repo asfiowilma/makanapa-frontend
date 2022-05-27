@@ -1,16 +1,9 @@
 import Avatar from 'boring-avatars'
+import Link from 'next/link';
 import React, { ReactNode } from 'react'
 import { FiTrash } from 'react-icons/fi';
 
-interface FoodHeaderProps {
-  category: string
-}
 
-interface FoodCardProps {
-  id: number
-  calories: number
-  name: string
-}
 
 interface WorkoutCardProps {
   id: number
@@ -19,9 +12,6 @@ interface WorkoutCardProps {
   name: string
 }
 
-interface FoodColumnProps {
-  children: ReactNode
-}
 
 export const HeroCards = () => {
   return (
@@ -32,7 +22,7 @@ export const HeroCards = () => {
           <h2 className="card-title">Bingung Mau Makan Apa?</h2>
           <p>Lihat rekomendasi kami untuk sarapan, makan siang, dan makan malam sekarang~</p>
           <div className="card-actions justify-end">
-            <button className="btn btn-primary">Lihat Rekomendasi</button>
+            <Link href='/meal'><a className="btn btn-primary">Lihat Rekomendasi</a></Link>
           </div>
         </div>
       </div>
@@ -48,37 +38,6 @@ export const HeroCards = () => {
       </div>
     </div>
   )
-}
-
-export const FoodHeader = ({ category }: FoodHeaderProps) => {
-  return <div className="bg-primary-100 text-center text-primary-800 p-2 rounded-lg uppercase font-medium">
-    {category}
-  </div>
-}
-
-export const FoodCard = ({ id, name, calories }: FoodCardProps) => {
-  return <div className="card card-side bg-base-100 shadow-lg">
-    <figure>
-      <Avatar
-        size={80}
-        name={name}
-        variant="bauhaus"
-        colors={["#CC333F", "#00A0B0", "#E29A1E", "#EAB835", "#EDC951"]}
-        square
-      />
-    </figure>
-    <div className="card-body p-4">
-      <h2 className="card-title">{name}</h2>
-      <p className="text-gray-400">{calories} calories</p>
-      <div className="card-actions justify-end">
-        <button className="btn btn-ghost text-error btn-sm btn-circle"><FiTrash className="w-5 h-5" /></button>
-      </div>
-    </div>
-  </div>
-}
-
-export const FoodColumn = ({ children }: FoodColumnProps) => {
-  return <div className="flex flex-col gap-4">{children}</div>
 }
 
 export const WorkoutCard = ({ id, name, time, calories }: WorkoutCardProps) => {
