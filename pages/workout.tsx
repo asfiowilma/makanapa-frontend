@@ -91,7 +91,7 @@ const handleStartWorkoutButton = async function() {
         </div>
         <div className="text-primary-500 font-bold mb-4">Workout Saya</div>
         <div className="grid grid-cols-3 gap-4">
-          {workoutHistory && workoutHistory.map((history) => <HistoryCard id={history.id} timestamp={history.timestamp} user_id={history.user_id} workouts={history.workouts} />)}
+          {workoutHistory && workoutHistory.map((history) => <HistoryCard key={history.id} id={history.id} timestamp={history.timestamp} user_id={history.user_id} workouts={history.workouts} />)}
         </div>
       </div>
     </Layout>

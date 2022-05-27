@@ -20,7 +20,7 @@ export const HistoryCard = ({ id, user_id, timestamp, workouts }: HistoryCardPro
     let body = [<div></div>]
 
     workouts.forEach((wo) => {
-        body.push(<div style={{margin: 10}}><WorkoutCard id={wo.id} name={wo.name} time={wo.target_time} calories={wo.estimated_calories} /></div>)
+        body.push(<div style={{margin: 10}}><WorkoutCard key={wo.id} id={wo.id} name={wo.name} time={wo.target_time} calories={wo.estimated_calories} /></div>)
     });
 
     return <div className="text-gray-400 leading-tight">
