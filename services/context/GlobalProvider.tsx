@@ -1,6 +1,7 @@
 import React, { ReactNode } from 'react'
 import { AuthProvider } from './AuthContext'
 import { MealProvider } from './MealContext'
+import { WorkoutProvider } from './WorkoutContext'
 
 interface Props {
   children?: ReactNode
@@ -9,7 +10,9 @@ interface Props {
 export const GlobalProvider: React.FC<Props> = ({ children }: Props) => {
   return (
     <AuthProvider>
-      <MealProvider>{children}</MealProvider>
+      <MealProvider>
+        <WorkoutProvider>{children}</WorkoutProvider>
+      </MealProvider>
     </AuthProvider>
   )
 }
