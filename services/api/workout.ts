@@ -1,4 +1,4 @@
-import { WORKOUT_URL, LOCAL_URL } from "@constants/endpoints";
+import { WORKOUT_URL } from "@constants/endpoints";
 import { WorkoutHistory, WorkoutRequest } from "@typeDefs/workout";
 import axios from "axios";
 
