@@ -32,7 +32,7 @@ export const HeroCards = () => {
           <h2 className="card-title">Ayo Workout!</h2>
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam magni error at modi, odio animi.</p>
           <div className="card-actions justify-end">
-            <button className="btn btn-primary">Workout</button>
+            <Link href='/workout'><a className="btn btn-primary">Workout</a></Link>
           </div>
         </div>
       </div>
