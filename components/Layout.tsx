@@ -1,5 +1,6 @@
 import React, { ReactNode } from 'react'
 import { Navbar } from './Navbar'
+import { CalorieCircle } from "@components/Dashboard";
 
 type Props = {
   children: ReactNode
@@ -23,8 +24,12 @@ export const Layout = ({ children }: Props) => {
               <div className="text-white text-xl font-extrabold">MakanApa?</div>
               <div className="text-white text-sm">#IniJargon</div>
             </a>
-            <li><a>Sidebar Item 1</a></li>
-            <li><a>Sidebar Item 2</a></li>
+            <li className="my-2 overflow-y-auto w-full bg-base-100 flex justify-center items-center">
+              <div className="text-black text-xl font-extrabold">Calories Remaining</div>
+            </li>
+            <CalorieCircle id={0} calories={1500} type="Remaining" />
+            <CalorieCircle id={0} calories={300} type="Food" />
+            <CalorieCircle id={0} calories={1000} type="Exercise" />
           </ul>
 
         </div>
