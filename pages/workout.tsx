@@ -55,7 +55,7 @@ const connectMq = function() {
 
 const handleStartWorkoutButton = async function() {
     // dummy data pls change with workout service real API
-    const workout = await startWorkout(8, targetTime)
+    const workout = await startWorkout(userProfile.id, targetTime)
     const req = parseJson(workout.data)
     
     const res = await axios.post(
@@ -73,7 +73,7 @@ const handleStartWorkoutButton = async function() {
         <input
           className="input input-bordered w-full"
           type="number"
-          placeholder="20"
+          placeholder="20 (dalam menit)"
           onChange={e => { setTargetTime(parseInt(e.currentTarget.value)); }}
         />
         <p className="btn btn-primary mb-8" onClick={() => handleStartWorkoutButton()}>Start Workout</p>
